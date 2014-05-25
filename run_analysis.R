@@ -42,7 +42,7 @@ data$activity <- factor(data$activity, labels=as.vector(activities[,2]))
 #
 columns <- append(grep("mean", names(data), value=T), grep("std", names(data), value=T))
 dataset <- data[, c(columns, "subject", "activity")]
-write.csv(dataset, file="data/dataset.csv", row.names=F)
+write.csv(dataset, file="data/dataset.txt", row.names=F)
 
 #
 # Average of each variable for each activity and each subject
@@ -50,5 +50,5 @@ write.csv(dataset, file="data/dataset.csv", row.names=F)
 vars <- !names(dataset) %in% c("subject", "activity")
 dataset.long <- melt(dataset, id=c("subject", "activity"))
 subj_activity.mean <- dcast(dataset.long, subject+activity ~ variable, mean)
-write.csv(subj_activity.mean, file="data/subj_activity_mean.csv", row.names=F)
+write.csv(subj_activity.mean, file="data/subj_activity_mean.txt", row.names=F)
 
