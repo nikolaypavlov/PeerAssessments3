@@ -12,6 +12,6 @@ The following steps was performed during analysis:
 
 * Descriptive activity names was added.
 
-* Extracted features related to mean and standard deviation.
+* Extracted features related to mean and standard deviation (saved in data/dataset.csv)
 
-* An average of each variable for each activity and subject extracted to separate dataset.
+* An average of each variable for each activity and subject extracted to separate dataset (saved in data/subj_activity_mean.csv)
